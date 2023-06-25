@@ -1,0 +1,610 @@
+*
+{
+    font-family:'Times New Roman', Times, serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    transition:all .2s linear;
+ }
+
+
+ html
+ {
+    font-size: 62.5%;
+    overflow-x: hidden;
+ }
+ 
+ section
+ {
+    padding:3rem 2rem;
+ }
+ 
+ .empty
+ {
+    padding:1.5rem;
+    text-align: center;
+    border:rgb(0, 0, 0);
+    background-color:rgb(157, 70, 70);
+    color:rgb(255, 255, 255);
+    font-size: 2rem;
+ }
+
+ .title{
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color:black;
+    font-size: 4rem;
+ }
+
+ /* BUTTONS */
+ 
+ .btn, .option-btn, .delete-btn, .white-btn
+ {
+    display: inline-block;
+    margin-top: 1rem;
+    padding:1rem 3rem;
+    cursor: pointer;
+    color:white;
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    text-transform: capitalize;
+ }
+ 
+ .btn:hover,.option-btn:hover,.delete-btn:hover
+ {
+    background-color:black;
+ }
+ 
+ .white-btn,.btn
+ {
+    background-color: green;
+ }
+ 
+ .option-btn
+ {
+    background-color:rgb(121, 153, 74);
+ }
+ 
+ .delete-btn
+ {
+    background-color:brown;
+ }
+ 
+ .white-btn:hover
+ {
+    background-color:white;
+    color:black;
+ }
+
+ @keyframes fadeIn {
+    0%{
+       transform: translateY(1rem);
+       opacity: .2s;
+    }
+ }
+
+/* HEADER */
+
+ .header
+ {
+    position: sticky;
+    top:0; 
+    left:0; 
+    right:0;
+    z-index: 1000;
+    background-color: white;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+ }
+ 
+ .header .flex
+ {
+    display: flex;
+    align-items: center;
+    padding:2rem;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1200px;
+    margin:0 auto;
+ }
+  
+ .header .flex .logo
+ {
+    font-size: 3rem;
+    font-family: 'Courier New', Courier;
+    font-weight: bold;
+    color:rgb(3, 3, 3);
+ }
+ 
+ .header .flex .logo span
+ {
+    font-family: 'Courier New', Courier;
+    color:green;
+ }
+ 
+ .header .flex .navbar a
+ {
+    margin:0 4rem;
+    font-size: 2rem;
+    font-weight:bolder;
+    font-family:'Courier New', Courier, monospace;
+    color:#6b3636;
+ }
+ 
+ .header .flex .navbar a:hover
+ {
+    color:green;
+    text-decoration: none;
+ }
+ 
+ .header .flex .icons div
+ {
+    margin-left: 1.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color:black;
+ }
+ 
+ .header .flex .icons div:hover
+ {
+    color:green;
+ }
+ 
+ .header .flex .account-box
+ {
+    position: absolute;
+    top:120%; right:2rem;
+    width: 30rem;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    padding:2rem;
+    text-align: center;
+    border-radius: .5rem;
+    border:rgb(0, 0, 0);
+    background-color:white;
+    display: none;
+    animation:fadeIn .2s linear;
+ }
+ 
+ .header .flex .account-box.active
+ {
+    display: inline-block;
+ }
+ 
+ .header .flex .account-box p
+ {
+    font-size: 2rem;
+    color:rgb(0, 0, 0);
+    margin-bottom: 1.5rem;
+ }
+ 
+ .header .flex .account-box p span
+ {
+    color:green;
+ }
+ 
+ .header .flex .account-box .delete-btn
+ {
+    margin-top: 0;
+ }
+ 
+ .header .flex .account-box div
+ {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color:wheat;
+ }
+ 
+ .header .flex .account-box div a
+ {
+    color:rgb(0, 250, 112);
+ }
+ 
+ .header .flex .account-box div a:hover
+ {
+    color: black;
+    text-decoration: none;
+ }
+ 
+ #menu-btn
+ {
+    display: none;
+ }
+ 
+/* DASHBOARD */
+
+ .dashboard .box-container
+ {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+    max-width: 1200px;
+    margin:0 auto;
+    align-items: flex-start;
+ }
+ 
+ .dashboard .box-container .box
+ {
+    border-radius: .5rem;
+    padding:2rem;
+    background-color:white;
+    box-shadow:0 .5rem 1rem rgb(2, 248, 113);
+    border:gray;
+    text-align: center;
+ }
+ 
+ .dashboard .box-container .box h3
+ {
+    font-size: 5rem;
+    color:black; 
+ }
+ 
+ .dashboard .box-container .box p
+ {
+    margin-top: 1.5rem;
+    padding:1.5rem;
+    background-color:rgb(85, 226, 156);
+    color:rgb(9, 14, 9);
+    font-size: 2rem;
+    border-radius: .5rem;
+    border:gray;
+ }
+ 
+/* PRODUCTS */
+
+ .add-products form
+ {
+    background-color:white;
+    border-radius: .5rem;
+    padding:2rem;
+    text-align: center;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    border:grey;
+    max-width: 50rem;
+    margin:0 auto;
+ }
+ 
+ .add-products form h3
+ {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color:black;
+    margin-bottom: 1.5rem;
+ }
+ 
+ .add-products form .box
+ {
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: .5rem;
+    margin:1rem 0;
+    padding:1.2rem 1.4rem;
+    color:black;
+    font-size: 1.8rem;
+    --border:.1rem solid black;
+ }
+ 
+ .show-products .box-container
+ {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap:1.5rem;
+    max-width: 1200px;
+    margin:0 auto;
+    align-items: flex-start;
+ }
+ 
+ .show-products
+ {
+    padding-top: 0;
+ }
+ 
+ .show-products .box-container .box
+ {
+    text-align: center;
+    padding:2rem;
+    border-radius: .5rem;
+    border:.1rem solid black;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    background-color:white;
+ }
+ 
+ .show-products .box-container .box img
+ {
+    height: 30rem;
+ }
+ 
+ .show-products .box-container .box .name
+ {
+    padding:1rem 0;
+    font-size: 2rem;
+    color:black;
+ }
+ 
+ .show-products .box-container .box .price
+ {
+    padding:1rem 0;
+    font-size: 2.5rem;
+    color:brown;
+ }
+ 
+ .edit-product-form
+ {
+    min-height: 100vh;
+    background-color: rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:2rem;
+    overflow-y: scroll;
+    position: fixed;
+    top:0; 
+    left:0; 
+    z-index: 1200;
+    width: 100%;
+ }
+ 
+ .edit-product-form form
+ {
+    width: 50rem;
+    padding:2rem;
+    text-align: center;
+    border-radius: .5rem;
+    background-color:white;
+ }
+ 
+ .edit-product-form form img
+ {
+    height: 25rem;
+    margin-bottom: 1rem;
+ }
+ 
+ .edit-product-form form .box
+ {
+    margin:1rem 0;
+    padding:1.2rem 1.4rem;
+    border:.1rem solid black;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;    
+    font-size: 1.8rem;
+    color:var(--black);
+    width: 100%;
+ }
+ 
+/* ORDERS */
+
+ .orders .box-container
+ {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap:1.5rem;
+    max-width: 1200px;
+    margin:0 auto;
+    align-items: flex-start;
+ }
+ 
+ .orders .box-container .box
+ {
+    background-color:white;
+    padding:2rem;
+    border:.1rem solid black;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+ }
+ 
+ .orders .box-container .box p
+ {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color:rgb(31, 49, 3);
+ }
+ 
+ .orders .box-container .box p span
+ {
+    color:green;
+ }
+ 
+ .orders .box-container .box form
+ {
+    text-align: center;
+ }
+ 
+ .orders .box-container .box form select
+ {
+    border-radius: .5rem;
+    margin:.5rem 0;
+    width: 100%;
+    background-color:rgb(165, 223, 79);
+    border:.1rem solid black;
+    padding:1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color:black;
+ }
+ 
+/* USERS */
+
+ .users .box-container
+ {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap:1.5rem;
+    max-width: 1200px;
+    margin:0 auto;
+    align-items: flex-start;
+ }
+ 
+ .users .box-container .box
+ {
+    background-color:white;
+    padding:2rem;
+    border:.1rem solid black;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    text-align:justify;
+ }
+ 
+ .users .box-container .box p
+ {
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    color:rgb(0, 0, 0);
+ }
+ 
+ .users .box-container .box p span
+ {
+    color:rgb(0, 0, 0);
+ }
+ 
+ .users .box-container .box .delete-btn
+ {
+    margin-top: 0;
+ }
+ 
+
+
+ /* MESSAGE */
+
+
+ .message
+ {
+    position: sticky;
+    top:0;
+    margin:0 auto;
+    max-width: 1500px;
+    background-color:rgb(110, 247, 108);
+    padding:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    gap:1.5rem;
+ }
+ 
+ .message span
+ {
+    font-size: 2rem;
+    color:rgb(0, 0, 0);
+ }
+ 
+ .message i
+ {
+    cursor: pointer;
+    color:rgb(0, 0, 0);
+    font-size: 2.5rem;
+ }
+ 
+ .message i:hover
+ {
+    transform: rotate(90deg);
+ }
+
+ .messages .box-container
+ {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 35rem);
+    justify-content: center;
+    gap:1.5rem;
+    max-width: 1200px;
+    margin:0 auto;
+    align-items: flex-start;
+ }
+ 
+ .messages .box-container .box
+ {
+    background-color: white;
+    padding:2rem;
+    border:.1rem solid black;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+ }
+ 
+ .messages .box-container .box p
+ {
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    color:rgb(29, 46, 3);
+    line-height: 1.5;
+ }
+ 
+ .messages .box-container .box p span
+ {
+    color:green;
+ }
+ 
+ .messages .box-container .box .delete-btn
+ {
+    margin-top: 0;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* MEDIA QUERIES  */
+ 
+ @media (max-width:991px){
+ 
+    html{
+       font-size: 55%;
+    }
+ 
+ }
+ 
+ @media (max-width:768px){
+ 
+    #menu-btn{
+       display: inline-block;
+    }
+ 
+    .header .flex .navbar{
+       position: absolute;
+       top:99%; left:0; right:0;
+       background-color: var(--white);
+       border-top: var(--border);
+       border-bottom: var(--border);
+       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+ 
+    .header .flex .navbar.active{
+       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+ 
+    .header .flex .navbar a{
+       margin:2rem;
+       display: block;
+    }
+ 
+ }
+ 
+ @media (max-width:450px){
+ 
+    html{
+       font-size: 50%;
+    }
+ 
+    .title{
+       font-size: 3rem;
+    }
+ 
+ }
